@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/imageInstance.unity
     guid: 432f2ff8619a312408869ac0fc2f4d2f
-  - enabled: 1
+  - enabled: 0
     path: Assets/OpenCV+Unity/Demo/OCR.Alphabet/AlphabetOCR.unity
     guid: d0f70e1287fbd6047ac361ee8077b3d6
   m_configObjects: {}

@@ -17,8 +17,7 @@
 
 //     public Button b1;
 //     public Texture2D objecttext;
-    
-//     // Start 
+//     Start 
 //     void Start()
 //     {
 //         arOrigin = FindObjectOfType<ARSessionOrigin>();

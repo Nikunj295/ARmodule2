@@ -5452,7 +5452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1095917190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5533,7 +5533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1234990088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5580,7 +5580,7 @@ MonoBehaviour:
   m_RawImage: {fileID: 733763853}
   m_ImageInfo: {fileID: 1875497534}
   b1: {fileID: 1069999205}
-  texture1: {fileID: 0}
+  m_Texture: {fileID: 0}
 --- !u!1 &1264701873
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,11 +5665,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264701873}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 882bfeae60a0f11418cda90fc02e0bd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 614f998a8ce80ab4486683f58d0d3568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameInsta: {fileID: 2016785700821322800, guid: a027d1d3abdd3d34492190e6c91d201c,
+    type: 3}
+  spawn: {fileID: 0}
 --- !u!114 &1264701879
 MonoBehaviour:
   m_ObjectHideFlags: 0

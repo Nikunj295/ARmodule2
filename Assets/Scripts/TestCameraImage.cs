@@ -1,6 +1,4 @@
-﻿namespace OpenCvSharp{
-
-using System;
+﻿using System;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
@@ -59,39 +57,39 @@ public class TestCameraImage : MonoBehaviour
     //public Button b2;
 
 
-    public Texture2D texture1;
+    // public Texture2D texture1;
 
     void Start() {
-        b1 = b1.GetComponent<Button>();
+        // b1 = b1.GetComponent<Button>();
         //b2 = b2.GetComponent<Button>();
-        b1.onClick.AddListener(f1);
+        // b1.onClick.AddListener(f1);
         //b2.onClick.AddListener(place);
     }
 
     
-    void f1(){
+    // void f1(){
         
-        Mat mainMat = new Mat(m_Texture.height, m_Texture.width, MatType.CV_8UC3);
-        Mat grayMat = new Mat();
-        mainMat = Unity1.TextureToMat(m_Texture);
-        Cv2.CvtColor(mainMat, grayMat, ColorConversionCodes.BGR2GRAY);
-        Cv2.GaussianBlur(grayMat, grayMat, new Size(5, 5), 0);
-        Cv2.Canny(grayMat, grayMat, 10.0, 70.0);
-        Cv2.FastNlMeansDenoising(grayMat, grayMat, 3, 7, 21);
-        Cv2.Threshold(grayMat, grayMat, 70.0, 255.0, ThresholdTypes.BinaryInv);
+    //     Mat mainMat = new Mat(m_Texture.height, m_Texture.width, MatType.CV_8UC3);
+    //     Mat grayMat = new Mat();
+    //     mainMat = Unity.TextureToMat(m_Texture);
+    //     Cv2.CvtColor(mainMat, grayMat, ColorConversionCodes.BGR2GRAY);
+    //     Cv2.GaussianBlur(grayMat, grayMat, new Size(5, 5), 0);
+    //     Cv2.Canny(grayMat, grayMat, 10.0, 70.0);
+    //     Cv2.FastNlMeansDenoising(grayMat, grayMat, 3, 7, 21);
+    //     Cv2.Threshold(grayMat, grayMat, 70.0, 255.0, ThresholdTypes.BinaryInv);
         
-        texture1 = Unity1.MatToTexture(grayMat);
+    //     texture1 = Unity.MatToTexture(grayMat);
 
-        Color[] pixels = texture1.GetPixels(0, 0, texture1.width, texture1.height, 0);
-        for (int p = 0; p < pixels.Length; p++)
-        {
-            if (pixels[p].Equals(new Color(1, 1, 1, 1)))
-                pixels[p] = new Color(0, 0, 0, 0);
-        }
-        texture1.SetPixels(0, 0, texture1.width, texture1.height, pixels, 0);
-        texture1.Apply();
-        //m_RawImage.texture = texture1;
-    }
+    //     Color[] pixels = texture1.GetPixels(0, 0, texture1.width, texture1.height, 0);
+    //     for (int p = 0; p < pixels.Length; p++)
+    //     {
+    //         if (pixels[p].Equals(new Color(1, 1, 1, 1)))
+    //             pixels[p] = new Color(0, 0, 0, 0);
+    //     }
+    //     texture1.SetPixels(0, 0, texture1.width, texture1.height, pixels, 0);
+    //     texture1.Apply();
+    //     //m_RawImage.texture = texture1;
+    // }
     // void place(){
     //     // UnityEngine.Rect r2 = new UnityEngine.Rect(0, 0, texture1.width, texture1.height);
     //     // s1 = Sprite.Create(texture1, r2, new Vector2(0.5f, 0.5f), 100.0f);
@@ -149,11 +147,10 @@ public class TestCameraImage : MonoBehaviour
 
         // Apply the updated texture data to our texture
         m_Texture.Apply();
-
         // Set the RawImage's texture so we can visualize it.
-        
     }
+    public Texture2D m_Texture;
+}
 
-    Texture2D m_Texture;
-}
-}
+
+
